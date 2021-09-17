@@ -1,0 +1,23 @@
+public class FeetAndInchesToCentimeter {
+    public static double CalcFeetAndInchesToCentimeters(int Feet, int Inches) {
+        if ((Feet >= 0) && ((Inches >= 0) && (Inches <= 12))) {
+            double CENTIMETERS = (12 * Feet) * 2.54;
+            CENTIMETERS +=  Inches * 2.54 ;
+            System.out.println(Feet+"feet" + Inches +"inches =" + CENTIMETERS +"cm");
+            return 0;
+
+        } else
+            System.out.println("invalid feet or inches");
+            return -1;
+
+    }
+    public static double CalcFeetAndInchesToCentimeters(int Inches){
+        if(Inches>=0){
+            int FEET = Inches / 12;
+            int remaininginches = Inches%12;
+            System.out.println(Inches +"inches ="+FEET+"feet"+remaininginches+"inches");
+            return CalcFeetAndInchesToCentimeters(FEET,remaininginches);//calling the first method as this method return the valuue in feet and remaing inches which we convert into the centimeters.
+        }else
+            return -1;
+    }
+}
