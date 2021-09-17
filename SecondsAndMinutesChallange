@@ -1,0 +1,23 @@
+public class main {
+    public static void main(String[] args){
+            String x = getDurationString(65,400);
+            String y = getDurationString(99);
+        System.out.println(x);
+        System.out.println(y);
+    }
+    public static String getDurationString(long minutes,long seconds){
+            if((minutes>=0)&&(seconds>=0)&&(seconds<=59)){
+                long hours= minutes/60 ;
+                long remainingminutes = minutes % 60;
+                return hours + "h" + remainingminutes +"m"+ seconds+ "s";
+            }else
+                return "Invalid Value ";
+    }public static String getDurationString(long seconds){
+        if((seconds>=0)){
+            long min = seconds/60;
+            long remainingseconds = seconds%60;
+            return getDurationString(min,remainingseconds);
+        }else
+            return "invalid Value";
+    }
+}
