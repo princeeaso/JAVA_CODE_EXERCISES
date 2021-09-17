@@ -1,0 +1,11 @@
+public class DecimalComparator {
+    public static boolean areEqualByThreeDecimalPlaces(double x, double y) {
+        double z =  x - y ;
+        if ( Math.abs(z) < 0.0009)  {
+            return true;
+        }else {
+
+            return false;
+        }
+    }
+}
