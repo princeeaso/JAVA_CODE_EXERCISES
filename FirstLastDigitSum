@@ -1,0 +1,19 @@
+public class FirstLastDigitSum {
+     public static int sumFirstAndLastDigit(int number){
+        int first;
+        int last;
+        int sum ;
+        int  temp = number;
+        if(number>=0){
+        last = number%10;
+         while(number>9){
+             number=number/10;
+         }first=number;
+         sum=first+last;
+        return sum;
+    }else{
+        return -1;
+    }
+}
+    
+}
