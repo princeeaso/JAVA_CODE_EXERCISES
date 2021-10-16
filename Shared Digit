@@ -1,0 +1,15 @@
+public class SharedDigit {
+    public static boolean hasSharedDigit(int n1,int n2){
+        if((n1>=10)&&(n1<=99)&&(n2>=10)&&(n2<=99)){
+            int lastdigitn1 = n1 %10;
+            int lastdigitn2 = n2 % 10;
+            int firstdigitn1 = n1/10;
+            int firstdigitn2 = n2 /10 ;
+            if ((lastdigitn1==lastdigitn2)||(lastdigitn1==firstdigitn2)||(firstdigitn1==firstdigitn2)||(firstdigitn1 == lastdigitn2)||(lastdigitn2==lastdigitn1)||(lastdigitn2==firstdigitn1)||(firstdigitn2==firstdigitn1)||(firstdigitn2 == lastdigitn1)){
+                return true;
+            }
+                
+        }
+    return false;
+}
+}
